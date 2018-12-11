@@ -1,2 +1,0 @@
-# BlitzBot
-My Bot.
