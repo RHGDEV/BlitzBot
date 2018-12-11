@@ -27,7 +27,7 @@ bot.on('ready', () => {
  })
  // Blocked thingy
 bot.on('message', message => {
-  if(message.author.id = blocked) return message.author.send('HELL NAH! Your blocked my dude.')
+  if(blocked.includes(message.author.id)) return message.author.send('HELL NAH! Your blocked my dude.')
     console.log(`${message.author.username} is trying to use a command while blocked!`)
 // Logs
 bot.on('message', message => {
@@ -58,5 +58,3 @@ bot.on('guildCreate', guild => {
 })
 
 bot.login(token)
-
-   });
