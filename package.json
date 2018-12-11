@@ -1,0 +1,15 @@
+{
+  "name": "Blitzbot",
+  "version": "3.0.0",
+  "description": "My offical discord bot.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blitz",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "latest",
+    "ms": "latest"
+  }
+}
