@@ -25,12 +25,7 @@ bot.on('ready', () => {
 
    fireLogger(`${bot.user.username} started up!`, bot, bot.user.avatarURL)
  })
- // Blocked thingy
-bot.on('message', message => {
-  if(blocked.blocked.includes(message.author.id)) return message.author.send('HELL NAH! Your blocked my dude.')
-    console.log(`${message.author.username} is trying to use a command while blocked!`)
-})
-// Logs
+// Command Running
 bot.on('message', message => {
     if (!message.guild) return;
    if (!message.content.startsWith(prefix)) return;
@@ -41,7 +36,7 @@ bot.on('message', message => {
    const loggedcmd = mArray[0].slice(prefix.length)
    const cmd = bot.commands.get(loggedcmd);
 
-  if (cmd) {
+  if (cmd && !blocked.blocked.includes(message.author.id)) {
       cmd.run(bot, message, args)
       console.log(`${message.author.username} just used the ${loggedcmd} command.`)
       fireLogger(`${message.author.username} used the ${loggedcmd} command.`, bot, bot.user.avatarURL)
