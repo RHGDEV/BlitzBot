@@ -27,7 +27,7 @@ bot.on('ready', () => {
  })
  // Blocked thingy
 bot.on('message', message => {
-  if(blocked.includes(message.author.id)) return message.author.send('HELL NAH! Your blocked my dude.')
+  if(blocked.blocked.includes(message.author.id)) return message.author.send('HELL NAH! Your blocked my dude.')
     console.log(`${message.author.username} is trying to use a command while blocked!`)
 })
 // Logs
