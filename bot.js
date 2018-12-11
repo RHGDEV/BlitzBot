@@ -50,7 +50,7 @@ bot.on('message', message => {
 // Join logs
 bot.on('guildCreate', guild => {
    const gname = guild.name
-   const em = new (require('discord.js').RichEmbed)
+   const em = new (require('discord.js').RichEmbed)()
    .setDescription(`I just joined ${gname}.`)
    .setTimestamp()
    .setColor("RANDOM")
