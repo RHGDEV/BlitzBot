@@ -3,7 +3,7 @@ const guildz = message.guild
 
 module.exports.run = (bot, message, args) => {
   const embed = new discord.RichEmbed(
-    .setAuthor(`BlitzBot`, `${bot.user.displayAvatarURL}`)
+    .setAuthor(`BlitzBot`, bot.user.displayAvatarURL)
     .setTitle(`Server Info for ${guildz.name}!`)
     .addField(`Members`,`They are ${guildz.members}`)
     .addField(`Region`,`The server region is ${guildz.region}`)
