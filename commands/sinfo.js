@@ -10,8 +10,6 @@ module.exports.run = (bot, message, args) => {
     .addField(`Roles`,`The roles in this server are ${guildz.roles}`)
     .addField(`Verified`,`This servers verification status is ${guildz.verified}`)
     .addField(`AFK Channel`,`The AFK channel for this server is ${guild.afkChannel}`)
-    .setTimestamp()
-    .setColor("RANDOM")
     message.channel.send({embed: embed})
   )}
 
