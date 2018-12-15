@@ -11,8 +11,9 @@ module.exports.run = (bot, message, args) => {
     .addField(`Verified`,`This servers verification status is ${guildz.verified}`)
     .addField(`AFK Channel`,`The AFK channel for this server is ${guild.afkChannel}`)
     .setTimestamp()
+    .setColor("RANDOM")
     message.channel.send({embed: embed})
-  })
+  )}
 
   module.exports.help = {
     name: "sinfo",
