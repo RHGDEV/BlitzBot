@@ -9,9 +9,11 @@ module.exports.run = (bot, message, args) => {
     .setTitle(`Commands!`)
     .setTimestamp()
     .setURL(`https://bot.blitzbot.ml`)
-		.setDescription(`This is all commands for BlitzBot! The prefix is ${prefix}`)
-		.addField(`uptime`, `This command shows the uptime of the bot`)
+	.setDescription(`This is all commands for BlitzBot! The prefix is ${prefix}`)
+	.addField(`uptime`, `This command shows the uptime of the bot`)
     .addField(`info`, `This command shows the bot info.`)
+    .addField(`sinfo`, `This command shows the server info.`)
+    .addField(`uinfo`, `This command shows the user info.`)
     .addField(`owners`, `This command shows the owners of the bot.`)
     .addField(`support`, `This command shows the support server details.`)
     .addField(`ping`, `This command shows you the ping of the bot.`)
@@ -20,7 +22,7 @@ module.exports.run = (bot, message, args) => {
     .addField(`tempmute`, `This command allows you to mute people, doesn't need a muted role.`)
     .addField(`addrole`, `This command allows you to add a role to someone.`)
     .addField(`delrole`, `This command allows you to delete a role to someone.`)
-
+//Owner Only
     .addField(`__**Owner only commands**__`, `These next commands are for owners of the bot only`)
     .addField(`setnormal`, `Sets the activity back to normal`)
     .addField(`restart`, `Restarts the bot.`)

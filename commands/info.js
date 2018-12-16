@@ -4,7 +4,7 @@ const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
   const embed = new discord.RichEmbed()
-  .addField("Hi!", `Hello, ${message.author.username}, I'm ${bot.user.username} version ${pkg.version}, a Discord bot running on NodeJS Version 8.`)
+  .addField("Hi!", `Hello, ${message.author.username}, I'm ${bot.user.username} version 4.0.0, a Discord bot running on NodeJS Version 8.`)
   .addField(`When was I born?`,`My creation date is ${bot.user.createdAt}`)
   .addField(`Version?`,`I'm currently running on Discord.js version 12.0.0 which utilizes the latest version of Discord.js, an *unofficial* Discord library by hydrabolt.`)
   .addField(`Creators`,`The main owners are <@399973532265742336> and <@242734840829575169>.`)
