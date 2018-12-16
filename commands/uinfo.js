@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
       .setTitle(`User Info for ${message.author.username}!`)
         .addField("User ID:", `Your user ID is ${message.author.id}`)
         .addField(`Time Of Join server:`,`You joined this server at ${message.author.joinedAt}`)
-        .addField(`Time Of Join Discord:`,`You joined discord at ${message.author.user.createdAt}`)
+        .addField(`Time Of Join Discord:`,`You joined discord at ${message.author.createdAt}`)
         .addField('Roles:','${message.author.roles}')
       .setTimestamp()
     .setColor("RANDOM")
