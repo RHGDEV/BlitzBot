@@ -1,6 +1,7 @@
 const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
+  if (!config.owners.includes(message.author.id)) return message.channel.send("Nope!");
   const type = args[0]
   const game = args.slice(type.length).join(" ")
   const embed = new discord.RichEmbed()

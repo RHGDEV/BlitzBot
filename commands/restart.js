@@ -1,6 +1,7 @@
 const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
+  if (!config.owners.includes(message.author.id)) return message.channel.send("Nope!");
 let em = new discord.RichEmbed()
 .setTitle(`${bot.user.username} Restarting...`)
 .setDescription(":wave: Restarting...")
