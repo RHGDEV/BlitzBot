@@ -1,3 +1,5 @@
+const config = require('../config.json')
+
 module.exports.run = (bot, message, args) => {
     if (!config.owners.includes(message.author.id)) return message.channel.send("Nope!");
     bot.user.setActivity(`for b!help | ${bot.guilds.size} servers`, {type: "WATCHING"})
