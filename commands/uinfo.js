@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args) => {
         .addField("User ID:", `Your user ID is ${message.author.id}`)
         .addField(`Time Of Join server:`,`You joined this server at ${message.author.joinedAt}`)
         .addField(`Time Of Join Discord:`,`You joined discord at ${message.author.createdAt}`)
-        .addField('Roles:','${message.author.roles}')
+        .addField('Roles:',`${message.author.roles}`)
       .setTimestamp()
     .setColor("RANDOM")
   message.channel.send({embed: embed})
