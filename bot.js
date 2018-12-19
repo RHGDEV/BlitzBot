@@ -32,8 +32,7 @@ fireLogger(`${bot.user.username} started up!`, bot, bot.user.avatarURL)
 bot.on(`message`, message => {
     if(!message.guild) return;
     if(!message.content.startsWith(prefix)) return;
-    if(message.author.bot) return message.author.send('Hi buddy.');
-
+    
     const mArray = message.content.split(" ")
     const args = mArray.slice(1)
     const loggedcmd = mArray[0].slice(prefix.length)
