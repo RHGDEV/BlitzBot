@@ -1,12 +1,12 @@
 const discord = require('discord.js')
 const raid = require('./raid.json')
-const antiwelcome = requre('./antiwelcome.json')
+const config = requre('../json/config.json')
 
 module.exports = (bot, member) => {
   console.log(`${member.user.username} just joined ${member.guild.name}.`)
 
   // Actual Functions
-  if (!antiwelcome.antiwelcome.includes(member.guild.id)) return;
+  if (!config.wblocker.includes(member.guild.id)) return;
   const channel = member.guild.channels.find(c => c.name == "welcome")
 
   if (!channel) return;

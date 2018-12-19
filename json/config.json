@@ -1,0 +1,12 @@
+{
+    "owners": ["399973532265742336"],
+    "wblocker": ["477792727577395210", "439866052684283905"],
+    "ublocked": ["138323759386853376"],
+    "sblocked": ["277889300857618444"],
+    "raiders": [""],
+    "prefix": "b!",
+    "bname": "BlitzBot",
+    "bversion": "5.0.0",
+    "botcommander": ["399973532265742336"],
+    "bupdate": "Major bot code rewrite and few new cmds!"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "newbot",
+  "version": "0.0.1",
+  "description": "My Newest Test Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blitz",
+  "license": "ISC",
+    "dependencies": {
+      "discord.js": "latest",
+      "ms": "latest"
+    }
+  }
+  

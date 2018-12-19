@@ -1,13 +1,13 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-const prefix = "b!"
+const config = require('../json/config.json')
 
 module.exports.run = async (bot, message, args) => {
 
   //!tempmute @user 1s/m/h/d
 
   if(message.author.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them, dont have permissions!");
-  if(!args[0 == help]) return message.reply(`This command is used by doing ${prefix}delrole **<@user> <Time of mute (s/m/h/d)>**`)
+  if(!args[0 == help]) return message.reply(`This command is used by doing ${config.prefix}delrole **<@user> <Time of mute (s/m/h/d)>**`)
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tomute) return message.reply("Couldn't find user.");
     let muterole = message.guild.roles.find(`name`, "muted");

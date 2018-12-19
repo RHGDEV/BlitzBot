@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args) => {
   const embed = new discord.RichEmbed()
     .setAuthor(`BlitzBot`, bot.user.displayAvatarURL)
       .setTitle(`Server Info for ${message.guild.name}!`)
-        .addField(`Members`,`They are ${message.guild.members}`)
+        .addField(`Members`,`They are ${message.guild.members.stringify()} which adds up to ${message.guild.members.size}`)
         .addField(`Region`,`The server region is ${message.guild.region}`)
         .addField(`Created At`,`This server was created on ${message.guild.createdAt}`)
         .addField(`Verified`,`This servers verification status is ${message.guild.verified}`)

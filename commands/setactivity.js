@@ -1,5 +1,5 @@
-const discord = require('discord.js')
-const config = require('../config.json')
+const discord = require("discord.js")
+const config = require('../json/config.json')
 
 module.exports.run = (bot, message, args) => {
   if (!config.owners.includes(message.author.id)) return message.channel.send("Nope!");

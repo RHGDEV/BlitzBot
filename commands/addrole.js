@@ -1,9 +1,8 @@
 const discord = require("discord.js")
-const prefix = "b!"
+const config = require('../json/config.json')
 
 module.exports.run = (bot, message, args) => {
-  if (!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Invalid Permissions!");
-  if(!args[0 == help]) return message.reply(`This command is used by doing ${prefix}addrole **<@role> <@user>**`)
+  if (!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("```Invalid Permissions!```");
   let role = message.mentions.roles.first();
   if (!role) return message.channel.send(`You need to mention a role.`);
   let member = message.mentions.members.first();
@@ -14,7 +13,7 @@ module.exports.run = (bot, message, args) => {
   if (!message.guild.roles.get(roleid)) return message.channel.send(`That role doesn't exist...`);
   member.addRole(role.id);
   let em = new discord.RichEmbed()
-  .setTitle("Blitzbot Addrole")
+  .setTitle(`${config.bname} AddRole`)
   .setDescription(`Okay! I added the role ${rolename} to the user ${member.user.username}.`)
   .setTimestamp()
   .setFooter(`${message.author.username} added role ${rolename} to user ${member.user.username}.`)

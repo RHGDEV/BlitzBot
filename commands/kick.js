@@ -1,8 +1,8 @@
-const discord = require('discord.js')
-const prefix = "b!"
+const discord = require("discord.js")
+const config = require('../json/config.json')
 
 module.exports.run = (bot, message, args) => {
-  if(!args[0 == help]) return message.reply(`This command is used by doing ${prefix}kick **<@user> <reason>**`)
+  if(!args[0 == help]) return message.reply(`This command is used by doing ${config.prefix}kick **<@user> <reason>**`)
   const reason = args.slice(1).join(" ")
   const member = message.mentions.members.first();
   const embed = new discord.RichEmbed()
