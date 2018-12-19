@@ -1,6 +1,6 @@
 // This is for a bot to go on github and hosted on heroku!!!
 
-const pak = require(`./json/package.json`)
+const pak = require(`./package.json`)
 discord = require('discord.js')
 fs = require('fs')
 const config = require('./json/config.json')
