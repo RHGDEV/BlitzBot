@@ -1,9 +1,9 @@
 const discord = require('discord.js');
-let logchannel = "511281772902744064";
+const logchannel = "511281772902744064";
 
 async function baselogger(bot, desc, icon) {
-  let messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
-  let log = messages.filter(m => m.author.id === bot.user.id &&
+  const messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
+  const log = messages.filter(m => m.author.id === bot.user.id &&
     m.embeds[0] &&
     m.embeds[0].type === 'rich' &&
     m.embeds[0].footer &&
@@ -18,7 +18,7 @@ async function baselogger(bot, desc, icon) {
     foot = `Case 0`
   }
   const thumburi = icon || ""
-  let embed = new discord.RichEmbed()
+  const embed = new discord.RichEmbed()
     .setTimestamp()
     .setAuthor(`BlitzBot Logs ✍`, bot.user.avatarURL)
     .setThumbnail(thumburi)
