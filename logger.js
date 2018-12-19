@@ -1,8 +1,9 @@
 const discord = require('discord.js');
-const logchannel = "511281772902744064";
+const id = "511281772902744064";
 
 async function baselogger(bot, desc, icon) {
-  const messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
+  const channel = bot.channels.get(id)
+  const messages = bot.channels.get(id).fetchMessages({limit: 5});
   const log = messages.filter(m => m.author.id === bot.user.id &&
     m.embeds[0] &&
     m.embeds[0].type === 'rich' &&
@@ -26,7 +27,7 @@ async function baselogger(bot, desc, icon) {
     .setDescription(desc)
     .setFooter(foot);
   
-  bot.channels.get(logchannel).send({embed});
-};
+    await channel.send({embed: embed})
+  };
 
 module.exports = {baselogger};
