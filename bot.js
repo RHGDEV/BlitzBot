@@ -7,7 +7,7 @@ const config = require('./json/config.json')
 const bot = new discord.Client()
 const prefix = config.prefix
 const token = process.env.token // Never show this.
-const fireLogger = require('./logger.js').fireLogger
+const fireLogger = require('./logger.js').baselogger
 bot.commands = new discord.Collection()
 bot.owners = ['399973532265742336']
 fs.readdir('./commands/', (err, files) => {
@@ -20,7 +20,7 @@ fs.readdir('./commands/', (err, files) => {
 // Watching
 bot.on(`ready`, () => {
     console.log(`The bot named ${bot.user.username} is ready!`)
-    bot.user.setActivity(`Loading with the update ${config.bupdate}...` , {type: "STREAMING", url: "https://twitch.tv/discordapp"})
+    bot.user.setActivity(`Loading with the update "${config.bupdate}"...` , {type: "STREAMING", url: "https://twitch.tv/discordapp"})
     setTimeout(() => {
         bot.user.setActivity(`for ${prefix}help | ${bot.guilds.size} servers!`, {type: "WATCHING"})
     }, 10000);
