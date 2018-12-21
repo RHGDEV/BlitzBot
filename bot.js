@@ -25,7 +25,8 @@ bot.on(`ready`, () => {
         bot.user.setActivity(`for ${prefix}help | ${bot.guilds.size} servers!`, {type: "WATCHING"})
     }, 10000);
 
-fireLogger(bot, `${bot.user.username} started up!`, bot.user.avatarURL)
+fireLogger(bot, `${bot.user.username} started up!`, bot.user.avatarURL);
+
 })
 
 // Command running
@@ -41,7 +42,7 @@ bot.on(`message`, message => {
     if(cmd && !config.blocked.includes(message.author.id)) {
         cmd.run(bot, message, args)
         console.log(`${message.author.username} just used the ${loggedcmd} command.`)
-        fireLogger(bot, `${message.author.username} used the ${loggedcmd} command.`, bot.user.avatarURL)
+        fireLogger(bot, `${message.author.username} used the ${loggedcmd} command.`, bot.user.avatarURL);
      }
 })
 
