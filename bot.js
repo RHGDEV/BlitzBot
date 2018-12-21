@@ -25,7 +25,7 @@ bot.on(`ready`, () => {
         bot.user.setActivity(`for ${prefix}help | ${bot.guilds.size} servers!`, {type: "WATCHING"})
     }, 10000);
 
-fireLogger(`${bot.user.username} started up!`, bot, bot.user.avatarURL)
+fireLogger(bot`${bot.user.username} started up!`, bot.user.avatarURL);
 })
 
 // Command running
